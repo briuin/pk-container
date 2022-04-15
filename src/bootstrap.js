@@ -1,4 +1,5 @@
 import { start, registerApplication } from 'single-spa';
+import ConnectionService from 'pkConnect/ConnectionService';
 
 registerApplication(
     'floatingMenu',
@@ -13,3 +14,5 @@ registerApplication(
 );
 
 start();
+
+ConnectionService.init('https://pk-center.herokuapp.com/game');

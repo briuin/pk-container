@@ -20,7 +20,7 @@ const devConfig = {
       name: "pk-container",
       filename: "remoteEntry.js",
       remotes: {
-        floatingMenu: "floatingMenu@http://localhost:8081/remoteEntry.js",
+        floatingMenu: "floatingMenu@http://localhost:8083/remoteEntry.js",
         pkConnect: "pkConnect@http://localhost:8082/remoteEntry.js",
       },
       shared: [

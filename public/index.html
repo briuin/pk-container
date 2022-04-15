@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PK</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="importmap-type" content="systemjs-importmap" />
+    <script type="systemjs-importmap" src="./importmap.json"></script>
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="PK" />
+    <meta name="theme-color" content="#3f51b5" />
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js").then(function () {});
+      }
+    </script>
+
+    <link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" sizes="16x16" href="favicon.ico" />
+
+    <style>
+      body {
+        overscroll-behavior-y: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="connection"></div>
+    <div id="menu"></div>
+    <script src="https://unpkg.com/systemjs/dist/system.js"></script>
+    <script src="https://unpkg.com/import-map-overrides/dist/import-map-overrides.js"></script>
+    <script src="https://unpkg.com/single-spa/lib/umd/single-spa.min.js"></script>
+    <script>
+      // singleSpa.registerApplication(
+      //   "floating-menu",
+      //   () =>
+      //     System.import("floating-menu").then((app) => {
+      //       return app.get("./FloatingMenu").then((module) => {
+      //         return module();
+      //       });
+      //     }),
+      //   () => true,
+      //   { domElement: document.getElementById("menu") }
+      // );
+
+      // singleSpa.registerApplication(
+      //   "pk-connect",
+      //   () =>
+      //     System.import("pk-connect").then((app) => {
+      //       return app.get("./ConnectionStatus").then((module) => {
+      //         return module();
+      //       });
+      //     }),
+      //   () => true,
+      //   { domElement: document.getElementById("connection") }
+      // );
+
+      // singleSpa.start();
+    </script>
+  </body>
+</html>

@@ -23,6 +23,7 @@ const prodConfig = {
       remotes: {
         floatingMenu: "floatingMenu@https://briuin.github.io/floating-menu/remoteEntry.js",
         pkConnect: "pkConnect@https://briuin.github.io/pk-connect/remoteEntry.js",
+        game: "gameRockPaperScissors2@https://briuin.github.io/Game-RockPaperScissors2/remoteEntry.js"
       },
       shared: [
         {

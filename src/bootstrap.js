@@ -13,6 +13,12 @@ registerApplication(
     (location) => location.pathname.startsWith('/')
 );
 
+registerApplication(
+    'game',
+    () => import('game/HelloWorld'),
+    (location) => location.pathname.startsWith('/'),
+);
+
 start();
 
 ConnectionService.init('https://pk-center.herokuapp.com/game');

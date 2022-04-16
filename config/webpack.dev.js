@@ -22,6 +22,7 @@ const devConfig = {
       remotes: {
         floatingMenu: "floatingMenu@http://localhost:8083/remoteEntry.js",
         pkConnect: "pkConnect@http://localhost:8082/remoteEntry.js",
+        game: "gameRockPaperScissors2@http://localhost:8085/remoteEntry.js",
       },
       shared: [
         {

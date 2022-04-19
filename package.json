@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "copy-webpack-plugin": "^10.2.4",
+    "rxjs": "^7.5.5",
     "single-spa": "^5.8.2"
   },
   "devDependencies": {

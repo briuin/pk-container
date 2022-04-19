@@ -1,6 +1,9 @@
 import { start, registerApplication, mountRootParcel } from "single-spa";
 import ConnectionService from "pkConnect/ConnectionService";
 
+ConnectionService.init("https://pk-center.herokuapp.com/game");
+// ConnectionService.init("http://localhost:3000/game");
+
 const menuElement = document.getElementById("menu");
 const menuParcelProps = { domElement: menuElement, customProp1: "foo" };
 mountRootParcel(() => import("floatingMenu/FloatingMenu"), menuParcelProps);
@@ -13,10 +16,14 @@ registerApplication(
 
 registerApplication(
   "game",
-  () => import("game/HelloWorld"),
-  (location) => location.pathname.startsWith("/")
+  () => import("game/App"),
+  (location) => location.pathname.startsWith("/"),
+  {
+    player: {
+      name: `player${Math.floor(Math.random() * 10000)}`,
+    },
+    connection: ConnectionService,
+  }
 );
 
 start();
-
-ConnectionService.init("https://pk-center.herokuapp.com/game");

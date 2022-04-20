@@ -26,4 +26,10 @@ registerApplication(
   }
 );
 
+registerApplication(
+  "account",
+  () => import("account/App"),
+  (location) => location.hash.startsWith("#/account"),
+);
+
 start();

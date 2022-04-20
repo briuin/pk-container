@@ -11,13 +11,13 @@ mountRootParcel(() => import("floatingMenu/FloatingMenu"), menuParcelProps);
 registerApplication(
   "pkConnect",
   () => import("pkConnect/ConnectionStatus"),
-  (location) => location.pathname.startsWith("/")
+  (location) => location.hash === '' || location.hash === '#/',
 );
 
 registerApplication(
   "game",
   () => import("game/App"),
-  (location) => location.pathname.startsWith("/"),
+  (location) => location.hash === '' || location.hash === '#/',
   {
     player: {
       name: `player${Math.floor(Math.random() * 10000)}`,
